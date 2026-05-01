@@ -14,7 +14,20 @@
   --dark:#2d2d2d;
   --darker:#1a1a1a;
   --black:#0a0a0a;
-  --white:#ffffff;
+  --white:#ffffff;<form name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact">
+
+  <label>Nombre:</label>
+  <input type="text" name="name" required>
+
+  <label>Email:</label>
+  <input type="email" name="email" required>
+
+  <label>Mensaje:</label>
+  <textarea name="message" required></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
   --gray:#6b7280;
   --gray-light:#f4f7fa;
   --gold:#f5c518;
