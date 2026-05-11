@@ -468,7 +468,7 @@ footer{background:var(--black);padding:60px 5% 28px;}
     <div class="srv-card reveal"><span class="srv-icon">🎨</span><div class="srv-name">Painting</div><p class="srv-desc">Interior & exterior painting with premium paints that last for years.</p><div class="srv-arrow">→</div></div>
     <div class="srv-card reveal"><span class="srv-icon">🔳</span><div class="srv-name">Tile Work</div><p class="srv-desc">Custom tile installations for kitchens, bathrooms, and living spaces.</p><div class="srv-arrow">→</div></div>
     <div class="srv-card reveal"><span class="srv-icon">🔨</span><div class="srv-name">Remodeling</div><p class="srv-desc">Full home and room remodels that transform your space completely.</p><div class="srv-arrow">→</div></div>
-    <div class="srv-card reveal"><span class="srv-icon">🧱</span><div class="srv-name">Drywall</div><p class="srv-desc">Professional drywall installation, finishing, and repair services.</p><div class="srv-arrow">→</div></div>
+    <div class="srv-card reveal"><span class="srv-icon">🎞</span><div class="srv-name">Drywall</div><p class="srv-desc">Professional drywall installation, finishing, and repair services.</p><div class="srv-arrow">→</div></div>
     <div class="srv-card reveal"><span class="srv-icon">🏗️</span><div class="srv-name">Framing</div><p class="srv-desc">Structural framing for new builds, additions, and renovations.</p><div class="srv-arrow">→</div></div>
     <div class="srv-card reveal"><span class="srv-icon">🥔</span><div class="srv-name">Stone Work</div><p class="srv-desc">Natural and manufactured stone for walls, walkways, and accents.</p><div class="srv-arrow">→</div></div>
     <div class="srv-card reveal"><span class="srv-icon">🏠</span><div class="srv-name">Shingles & Roofing</div><p class="srv-desc">Roof installation, repair, and replacement with quality materials.</p><div class="srv-arrow">→</div></div>
@@ -610,26 +610,179 @@ footer{background:var(--black);padding:60px 5% 28px;}
     <div class="contact-form reveal-right">
       <div class="form-title">GET A FREE ESTIMATE</div>
       </script>
-</body>
-</html>
-<form action="https://formsubmit.co/jacobtelles1985@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Nombre" required>
-  <input type="email" name="email" placeholder="Correo electrónico" required>
-  <input type="tel" name="phone" placeholder="Teléfono">
-  <textarea name="message" placeholder="Mensaje" required></textarea>
+# Formulario Profesional para jgprobuilding.com
 
-  <input type="hidden" name="_subject" value="Nuevo mensaje desde jgprobuilding.com">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
+```html
+<section class="estimate-section">
+  <div class="estimate-container">
 
-  <button type="submit">Enviar</button>
-</form>
-      <div class="form-group"><label>CITY IN UTAH</label><input type="text" placeholder="Salt Lake City"></div>
-      <div class="form-group"><label>PROJECT DETAILS</label><textarea placeholder="Tell us about your project..."></textarea></div>
-      <button class="form-submit" onclick="submitForm()">🏗️ REQUEST FREE ESTIMATE</button>
+    <div class="estimate-image"></div>
+
+    <div class="estimate-form-box">
+      <h2>Get a Free Estimate</h2>
+      <p>
+        Professional remodeling and construction services in Utah.
+        Tell us about your project and we’ll contact you soon.
+      </p>
+
+      <form action="https://formsubmit.co/jacobtelles1985@gmail.com" method="POST">
+
+        <div class="form-grid">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="form-grid">
+          <input type="tel" name="phone" placeholder="Phone Number">
+          <input type="text" name="city" placeholder="City in Utah">
+        </div>
+
+        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde jgprobuilding.com">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <button type="submit">Request Estimate</button>
+      </form>
     </div>
   </div>
 </section>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#f5f5f5;
+}
+
+.estimate-section{
+  width:100%;
+  padding:60px 20px;
+  background:#f1f1f1;
+}
+
+.estimate-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 35px rgba(0,0,0,0.12);
+}
+
+/* Imagen profesional */
+.estimate-image{
+  min-height:650px;
+  background:
+  linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+  url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+}
+
+.estimate-form-box{
+  padding:60px;
+}
+
+.estimate-form-box h2{
+  font-size:48px;
+  margin-bottom:15px;
+  color:#111;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.estimate-form-box p{
+  color:#666;
+  line-height:1.6;
+  margin-bottom:35px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-bottom:15px;
+}
+
+input,
+textarea{
+  width:100%;
+  padding:16px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font-size:16px;
+  transition:0.3s;
+  background:#fafafa;
+}
+
+input:focus,
+textarea:focus{
+  outline:none;
+  border-color:#111;
+  background:#fff;
+}
+
+textarea{
+  height:160px;
+  resize:none;
+  margin-bottom:20px;
+}
+
+button{
+  width:100%;
+  padding:18px;
+  border:none;
+  border-radius:12px;
+  background:#111;
+  color:#fff;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#333;
+  transform:translateY(-2px);
+}
+
+/* Responsive */
+@media(max-width:900px){
+
+  .estimate-container{
+    grid-template-columns:1fr;
+  }
+
+  .estimate-image{
+    min-height:300px;
+  }
+
+  .estimate-form-box{
+    padding:35px 25px;
+  }
+
+  .estimate-form-box h2{
+    font-size:34px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+</style>
+```
+
 
 <!-- FOOTER -->
 <footer>
