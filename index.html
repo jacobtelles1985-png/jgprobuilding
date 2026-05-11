@@ -609,10 +609,8 @@ footer{background:var(--black);padding:60px 5% 28px;}
     </div>
     <div class="contact-form reveal-right">
       <div class="form-title">GET A FREE ESTIMATE</div>
-      </script>
-# Formulario Profesional para jgprobuilding.com
-
-```html
+      </script
+        
 <section class="estimate-section">
   <div class="estimate-container">
 
@@ -756,33 +754,10 @@ button:hover{
   transform:translateY(-2px);
 }
 
-/* Responsive */
-@media(max-width:900px){
-
-  .estimate-container{
-    grid-template-columns:1fr;
-  }
-
-  .estimate-image{
-    min-height:300px;
-  }
-
-  .estimate-form-box{
-    padding:35px 25px;
-  }
-
-  .estimate-form-box h2{
-    font-size:34px;
-  }
-
-  .form-grid{
-    grid-template-columns:1fr;
-  }
+/* FORM SUBMIT */
+function submitForm() {
+  alert("Thank you! We will contact you shortly with your free estimate. J&G PRO BUILDING SERVICES 🏗️");
 }
-
-</style>
-```
-
 
 <!-- FOOTER -->
 <footer>
@@ -930,19 +905,3 @@ function animateCounter(el, target) {
     el.textContent = Math.floor(count) + (el.dataset.suffix || "");
     if (count >= target) clearInterval(timer);
   }, 20);
-}
-</script>
-</body>
-</html>
-<form action="https://formsubmit.co/jacobtelles1985@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Nombre" required>
-  <input type="email" name="email" placeholder="Correo electrónico" required>
-  <input type="tel" name="phone" placeholder="Teléfono">
-  <textarea name="message" placeholder="Mensaje" required></textarea>
-
-  <input type="hidden" name="_subject" value="Nuevo mensaje desde jgprobuilding.com">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-
-  <button type="submit">Enviar</button>
-</form>
