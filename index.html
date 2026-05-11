@@ -761,18 +761,6 @@ function submitForm() {
 }
 
 /* COUNTER ANIMATION */
-function animateCounter(el, target) {
-  let count = 0;
-  const step = target / 60;
-  const timer = setInterval(() => {
-    count = Math.min(count + step, target);
-    el.textContent = Math.floor(count) + (el.dataset.suffix || "");
-    if (count >= target) clearInterval(timer);
-  }, 20);
-}
-</script>
-</body>
-</html>
 <form action="https://formsubmit.co/jacobtelles1985@gmail.com" method="POST">
   <input type="text" name="name" placeholder="Nombre" required>
   <input type="email" name="email" placeholder="Correo electrónico" required>
