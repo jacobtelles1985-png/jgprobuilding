@@ -625,7 +625,7 @@ footer{background:var(--black);padding:60px 5% 28px;}
         Tell us about your project and we’ll contact you soon.
       </p>
 
-      <form action="https://formsubmit.co/jacobtelles1985@gmail.com" method="POST">
+    <form action="https://formsubmit.co/jacobtelles1985@gmail.com" method="POST">
 
         <div class="form-grid">
           <input type="text" name="name" placeholder="Full Name" required>
