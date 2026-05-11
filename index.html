@@ -580,7 +580,7 @@ footer{background:var(--black);padding:60px 5% 28px;}
     <p class="cta-sub">Get your free estimate today — no commitment, no cost, just a conversation about making your dream home a reality.</p>
     <div class="cta-btns">
       <a href="#contact" class="btn-white">🏗️ GET FREE ESTIMATE</a>
-      <a href="tel:+1" class="btn-dark">📞 CALL US NOW (385) 370 4136 </a>
+      <a href="tel:+1" class="btn-dark">📞 CALL US NOW (801) 690 9314 </a>
     </div>
   </div>
 </div>
@@ -603,7 +603,7 @@ footer{background:var(--black);padding:60px 5% 28px;}
       </div>
       <p style="font-size:.95rem;color:var(--gray);font-weight:300;line-height:1.75;margin-bottom:12px;">We're here to help you build the home of your dreams. Reach out anytime — we respond fast.</p>
       <div class="ci-item"><div class="ci-icon">📍</div><div class="ci-text"><strong>LOCATION</strong><span>Utah, USA — Serving statewide</span></div></div>
-      <div class="ci-item"><div class="ci-icon">📞</div><div class="ci-text"><strong>PHONE</strong><a href="tel:+1">Call Now (385) 370 4136 </a></div></div>
+      <div class="ci-item"><div class="ci-icon">📞</div><div class="ci-text"><strong>PHONE</strong><a href="tel:+1">Call Now (801) 690 9314 </a></div></div>
       <div class="ci-item"><div class="ci-icon">📧</div><div class="ci-text"><strong>EMAIL</strong><a href="mailto:info@jgprobuildingservices.com">info@jgprobuildingservices.com</a></div></div>
       <div class="ci-item"><div class="ci-icon">🕐</div><div class="ci-text"><strong>HOURS</strong><span>Mon – Sat: 7:00 AM – 7:00 PM</span></div></div>
     </div>
@@ -742,28 +742,18 @@ reveals.forEach(r => obs.observe(r));
 
 /* BEFORE/AFTER SLIDERS */
 function initSlider(id) {
-  const box = document.getElementById(id);
-  if (!box) return;
-  const aw = document.getElementById(id + "-aw");
-  const ln = document.getElementById(id + "-ln");
-  const kn = document.getElementById(id + "-kn");
-  let drag = false;
-  function set(e) {
-    const r = box.getBoundingClientRect();
-    const x = Math.min(Math.max((e.touches ? e.touches[0].clientX : e.clientX) - r.left, 0), r.width);
-    const p = (x / r.width) * 100;
-    aw.style.width = p + "%";
-    ln.style.left = p + "%";
-    kn.style.left = p + "%";
-  }
-  kn.addEventListener("mousedown", () => drag = true);
-  box.addEventListener("touchstart", e => { drag = true; set(e); }, { passive: true });
-  document.addEventListener("mousemove", e => { if (drag) set(e); });
-  document.addEventListener("mouseup", () => drag = false);
-  document.addEventListener("touchmove", e => { if (drag) set(e); }, { passive: true });
-  document.addEventListener("touchend", () => drag = false);
-}
-["bs1","bs2","bs3"].forEach(initSlider);
+  const box = document.getElbmit.co/jacobtelles1985@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Nombre" required>
+  <input type="email" name="email" placeholder="Correo electrónico" required>
+  <input type="tel" name="phone" placeholder="Teléfono">
+  <textarea name="message" placeholder="Mensaje" required></textarea>
+
+  <input type="hidden" name="_subject" value="Nuevo mensaje desde jgprobuilding.com">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <button type="submit">Enviar</button>
+</form>
 
 /* FORM SUBMIT */
 function submitForm() {
