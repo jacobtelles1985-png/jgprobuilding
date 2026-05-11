@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -468,7 +469,7 @@ footer{background:var(--black);padding:60px 5% 28px;}
     <div class="srv-card reveal"><span class="srv-icon">🎨</span><div class="srv-name">Painting</div><p class="srv-desc">Interior & exterior painting with premium paints that last for years.</p><div class="srv-arrow">→</div></div>
     <div class="srv-card reveal"><span class="srv-icon">🔳</span><div class="srv-name">Tile Work</div><p class="srv-desc">Custom tile installations for kitchens, bathrooms, and living spaces.</p><div class="srv-arrow">→</div></div>
     <div class="srv-card reveal"><span class="srv-icon">🔨</span><div class="srv-name">Remodeling</div><p class="srv-desc">Full home and room remodels that transform your space completely.</p><div class="srv-arrow">→</div></div>
-    <div class="srv-card reveal"><span class="srv-icon">🎞</span><div class="srv-name">Drywall</div><p class="srv-desc">Professional drywall installation, finishing, and repair services.</p><div class="srv-arrow">→</div></div>
+    <div class="srv-card reveal"><span class="srv-icon">🎞�</span><div class="srv-name">Drywall</div><p class="srv-desc">Professional drywall installation, finishing, and repair services.</p><div class="srv-arrow">→</div></div>
     <div class="srv-card reveal"><span class="srv-icon">🏗️</span><div class="srv-name">Framing</div><p class="srv-desc">Structural framing for new builds, additions, and renovations.</p><div class="srv-arrow">→</div></div>
     <div class="srv-card reveal"><span class="srv-icon">🥔</span><div class="srv-name">Stone Work</div><p class="srv-desc">Natural and manufactured stone for walls, walkways, and accents.</p><div class="srv-arrow">→</div></div>
     <div class="srv-card reveal"><span class="srv-icon">🏠</span><div class="srv-name">Shingles & Roofing</div><p class="srv-desc">Roof installation, repair, and replacement with quality materials.</p><div class="srv-arrow">→</div></div>
@@ -604,13 +605,14 @@ footer{background:var(--black);padding:60px 5% 28px;}
       <p style="font-size:.95rem;color:var(--gray);font-weight:300;line-height:1.75;margin-bottom:12px;">We're here to help you build the home of your dreams. Reach out anytime — we respond fast.</p>
       <div class="ci-item"><div class="ci-icon">📍</div><div class="ci-text"><strong>LOCATION</strong><span>Utah, USA — Serving statewide</span></div></div>
       <div class="ci-item"><div class="ci-icon">📞</div><div class="ci-text"><strong>PHONE</strong><a href="tel:+1">Call Now (801) 690 9314 </a></div></div>
-      <div class="ci-item"><div class="ci-icon">📧</div><div class="ci-text"><strong>EMAIL</strong><a href="mailto:info@jgprobuildingservices.com">jacob.telles@jgprobuilding.com</a></div></div>
+      <div class="ci-item"><div class="ci-icon">📧</div><div class="ci-text"><strong>EMAIL</strong><a href="mailto:info@jgprobuildingservices.com">info@jgprobuildingservices.com</a></div></div>
       <div class="ci-item"><div class="ci-icon">🕐</div><div class="ci-text"><strong>HOURS</strong><span>Mon – Sat: 7:00 AM – 4:00 PM</span></div></div>
     </div>
     <div class="contact-form reveal-right">
       <div class="form-title">GET A FREE ESTIMATE</div>
-      </script
-        
+# Formulario Profesional para jgprobuilding.com
+
+```html
 <section class="estimate-section">
   <div class="estimate-container">
 
@@ -754,7 +756,32 @@ button:hover{
   transform:translateY(-2px);
 }
 
+/* Responsive */
+@media(max-width:900px){
 
+  .estimate-container{
+    grid-template-columns:1fr;
+  }
+
+  .estimate-image{
+    min-height:300px;
+  }
+
+  .estimate-form-box{
+    padding:35px 25px;
+  }
+
+  .estimate-form-box h2{
+    font-size:34px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+</style>
+```
 
 <!-- FOOTER -->
 <footer>
@@ -900,5 +927,11 @@ function animateCounter(el, target) {
   const timer = setInterval(() => {
     count = Math.min(count + step, target);
     el.textContent = Math.floor(count) + (el.dataset.suffix || "");
+    if (count >= target) clearInterval(timer);
+  }, 20);
+}
+</script>
+</body>
+</html>
     if (count >= target) clearInterval(timer);
   }, 20);
