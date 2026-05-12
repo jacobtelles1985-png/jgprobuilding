@@ -610,25 +610,141 @@ footer{background:var(--black);padding:60px 5% 28px;}
     <div class="contact-form reveal-right">
       <div class="form-title">GET A FREE ESTIMATE</div>
       </script>
-</body>
-</html>
-<form action="https://formsubmit.co/jacobtelles1985@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Nombre" required>
-  <input type="email" name="email" placeholder="Correo electrónico" required>
-  <input type="tel" name="phone" placeholder="Teléfono">
-  <textarea name="message" placeholder="Mensaje" required></textarea>
+<!-- CONTACT SECTION -->
+<section id="contact">
 
-  <input type="hidden" name="_subject" value="Nuevo mensaje desde jgprobuilding.com">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
+  <div class="contact-grid">
 
-  <button type="submit">Enviar</button>
-</form>
-      <div class="form-group"><label>CITY IN UTAH</label><input type="text" placeholder="Salt Lake City"></div>
-      <div class="form-group"><label>PROJECT DETAILS</label><textarea placeholder="Tell us about your project..."></textarea></div>
-      <button class="form-submit" onclick="submitForm()">🏗️ REQUEST FREE ESTIMATE</button>
+    <!-- INFO -->
+    <div class="contact-info">
+
+      <span class="sec-tag">CONTACT US</span>
+
+      <h2 class="sec-title">
+        GET YOUR <span>FREE ESTIMATE</span>
+      </h2>
+
+      <p class="sec-sub">
+        Professional remodeling and construction services in Utah.
+        Kitchens, bathrooms, flooring, painting and complete renovations.
+      </p>
+
+      <div class="ci-item">
+        <div class="ci-icon">📞</div>
+        <div class="ci-text">
+          <strong>PHONE</strong>
+          <span>(801) 000-0000</span>
+        </div>
+      </div>
+
+      <div class="ci-item">
+        <div class="ci-icon">📧</div>
+        <div class="ci-text">
+          <strong>EMAIL</strong>
+          <a href="mailto:jacobtelles1985@gmail.com">
+            jacobtelles1985@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="ci-item">
+        <div class="ci-icon">📍</div>
+        <div class="ci-text">
+          <strong>LOCATION</strong>
+          <span>Salt Lake City, Utah</span>
+        </div>
+      </div>
+
     </div>
+
+    <!-- FORM -->
+    <form action="https://formsubmit.co/jacobtelles1985@gmail.com"
+          method="POST"
+          class="contact-form">
+
+      <h3 class="form-title">
+        REQUEST ESTIMATE
+      </h3>
+
+      <div class="form-row">
+
+        <div class="form-group">
+          <label>FULL NAME</label>
+          <input type="text"
+                 name="name"
+                 placeholder="Your Name"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label>EMAIL ADDRESS</label>
+          <input type="email"
+                 name="email"
+                 placeholder="you@email.com"
+                 required>
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-group">
+          <label>PHONE NUMBER</label>
+          <input type="tel"
+                 name="phone"
+                 placeholder="(801) 000-0000">
+        </div>
+
+        <div class="form-group">
+          <label>SERVICE</label>
+
+          <select name="service">
+
+            <option>Kitchen Remodel</option>
+            <option>Bathroom Remodel</option>
+            <option>Flooring</option>
+            <option>Painting</option>
+            <option>Tile Installation</option>
+            <option>Full Renovation</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label>PROJECT DETAILS</label>
+
+        <textarea name="message"
+                  placeholder="Tell us about your project..."
+                  required></textarea>
+      </div>
+
+      <!-- FORMSUBMIT -->
+      <input type="hidden"
+             name="_subject"
+             value="Nuevo mensaje desde jgprobuilding.com">
+
+      <input type="hidden"
+             name="_captcha"
+             value="false">
+
+      <input type="hidden"
+             name="_template"
+             value="table">
+
+      <button type="submit"
+              class="form-submit">
+
+        REQUEST FREE ESTIMATE
+
+      </button>
+
+    </form>
+
   </div>
+
 </section>
 
 <!-- FOOTER -->
