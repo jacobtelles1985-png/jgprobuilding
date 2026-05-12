@@ -330,6 +330,240 @@ footer{background:var(--black);padding:60px 5% 28px;}
   .hero-btns{flex-direction:column;}
   #float-cta{bottom:16px;right:16px;padding:12px 18px;font-size:.75rem;}
 }
+
+/* CLICKABLE FOOTER PROJECT PANELS */
+.footer-links a{
+  cursor:pointer;
+}
+
+.jg-project-panel{
+  display:none;
+  background:#050505;
+  color:#fff;
+  padding:80px 5%;
+  border-top:1px solid rgba(75,184,240,.18);
+  border-bottom:1px solid rgba(75,184,240,.18);
+}
+
+.jg-project-panel.active{
+  display:block;
+}
+
+.jg-panel-inner{
+  max-width:1250px;
+  margin:0 auto;
+}
+
+.jg-panel-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:25px;
+  margin-bottom:35px;
+}
+
+.jg-panel-kicker{
+  font-family:"Barlow Condensed",sans-serif;
+  color:#18a6ff;
+  letter-spacing:7px;
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.jg-panel-title{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:56px;
+  letter-spacing:2px;
+  line-height:1;
+}
+
+.jg-panel-subtitle{
+  color:#b8b8b8;
+  max-width:760px;
+  font-size:18px;
+  line-height:1.8;
+  margin-top:12px;
+}
+
+.jg-panel-close{
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.16);
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:24px;
+  transition:.25s;
+}
+
+.jg-panel-close:hover{
+  background:#18a6ff;
+  border-color:#18a6ff;
+}
+
+.jg-card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.jg-card-grid.projects-grid{
+  grid-template-columns:repeat(5,1fr);
+}
+
+.jg-card{
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 14px 38px rgba(0,0,0,.35);
+  transition:.3s ease;
+}
+
+.jg-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(24,166,255,.55);
+  box-shadow:0 20px 55px rgba(24,166,255,.16);
+}
+
+.jg-card img{
+  width:100%;
+  height:205px;
+  object-fit:cover;
+  display:block;
+}
+
+.projects-grid .jg-card img{
+  height:145px;
+}
+
+.jg-card-body{
+  padding:20px;
+}
+
+.jg-card-body h4{
+  font-size:22px;
+  color:#fff;
+  margin-bottom:8px;
+}
+
+.jg-card-body p{
+  color:#a8a8a8;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.jg-about-box{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:28px;
+  align-items:stretch;
+}
+
+.jg-about-copy{
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:20px;
+  padding:34px;
+}
+
+.jg-about-copy p{
+  color:#c9c9c9;
+  font-size:18px;
+  line-height:1.9;
+  margin-bottom:18px;
+}
+
+.jg-about-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:22px;
+}
+
+.jg-point{
+  background:rgba(24,166,255,.08);
+  border:1px solid rgba(24,166,255,.18);
+  border-radius:14px;
+  padding:16px;
+  color:#fff;
+  font-weight:700;
+}
+
+.jg-about-image{
+  border-radius:20px;
+  overflow:hidden;
+  min-height:340px;
+}
+
+.jg-about-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.jg-review-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:18px;
+}
+
+.jg-review-card{
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;
+  padding:24px;
+}
+
+.jg-stars{
+  color:#f5c518;
+  font-size:20px;
+  letter-spacing:2px;
+  margin-bottom:14px;
+}
+
+.jg-review-card p{
+  color:#c9c9c9;
+  line-height:1.7;
+  font-size:15px;
+  margin-bottom:18px;
+}
+
+.jg-review-card h4{
+  color:#18a6ff;
+  font-size:18px;
+}
+
+@media(max-width:1050px){
+  .jg-card-grid,
+  .jg-card-grid.projects-grid,
+  .jg-review-grid,
+  .jg-about-box{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:650px){
+  .jg-project-panel{
+    padding:55px 22px;
+  }
+
+  .jg-panel-title{
+    font-size:42px;
+  }
+
+  .jg-card-grid,
+  .jg-card-grid.projects-grid,
+  .jg-review-grid,
+  .jg-about-box,
+  .jg-about-points{
+    grid-template-columns:1fr;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -714,6 +948,584 @@ footer{background:var(--black);padding:60px 5% 28px;}
 <!-- FONT AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
+
+<section id="panel-painting" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">SERVICE PROJECTS</div>
+        <h2 class="jg-panel-title">Painting Projects</h2>
+        <p class="jg-panel-subtitle">Clean finishes, sharp lines, and professional color upgrades.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid">
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80" alt="Interior Living Room Repaint">
+        <div class="jg-card-body">
+          <h4>Interior Living Room Repaint</h4>
+          <p>Smooth walls, clean edges, and a fresh modern finish for a brighter home.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?auto=format&fit=crop&w=900&q=80" alt="Exterior Paint Refresh">
+        <div class="jg-card-body">
+          <h4>Exterior Paint Refresh</h4>
+          <p>Weather-resistant exterior coating with a clean curb-appeal upgrade.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=80" alt="Accent Wall Finish">
+        <div class="jg-card-body">
+          <h4>Accent Wall Finish</h4>
+          <p>Premium detail painting to create a bold, elegant focal point.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="panel-tile" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">SERVICE PROJECTS</div>
+        <h2 class="jg-panel-title">Tile Work Projects</h2>
+        <p class="jg-panel-subtitle">Beautiful tile installations for bathrooms, kitchens, floors, and showers.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid">
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80" alt="Luxury Shower Tile">
+        <div class="jg-card-body">
+          <h4>Luxury Shower Tile</h4>
+          <p>Waterproof shower tile with clean grout lines and a premium finish.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80" alt="Kitchen Backsplash">
+        <div class="jg-card-body">
+          <h4>Kitchen Backsplash</h4>
+          <p>Modern backsplash design that protects the wall and elevates the kitchen.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Floor Tile Installation">
+        <div class="jg-card-body">
+          <h4>Floor Tile Installation</h4>
+          <p>Durable tile flooring installed with precision for long-lasting beauty.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="panel-remodeling" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">SERVICE PROJECTS</div>
+        <h2 class="jg-panel-title">Remodeling Projects</h2>
+        <p class="jg-panel-subtitle">Complete home transformations designed for comfort, value, and style.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid">
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80" alt="Open Concept Remodel">
+        <div class="jg-card-body">
+          <h4>Open Concept Remodel</h4>
+          <p>Walls, layout, finishes, and details upgraded for a modern open feel.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Bathroom Remodel">
+        <div class="jg-card-body">
+          <h4>Bathroom Remodel</h4>
+          <p>Functional and beautiful bathroom transformation with upgraded surfaces.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Kitchen Remodel">
+        <div class="jg-card-body">
+          <h4>Kitchen Remodel</h4>
+          <p>Cabinets, counters, flooring, and finishes updated for a premium kitchen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="panel-drywall" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">SERVICE PROJECTS</div>
+        <h2 class="jg-panel-title">Drywall Projects</h2>
+        <p class="jg-panel-subtitle">Clean drywall installation, repair, texture, and finish work.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid">
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="New Drywall Installation">
+        <div class="jg-card-body">
+          <h4>New Drywall Installation</h4>
+          <p>Straight, smooth drywall installed for remodels, additions, and repairs.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80" alt="Drywall Repair">
+        <div class="jg-card-body">
+          <h4>Drywall Repair</h4>
+          <p>Patches, damaged areas, and wall imperfections repaired professionally.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Texture & Finish">
+        <div class="jg-card-body">
+          <h4>Texture & Finish</h4>
+          <p>Ready-to-paint drywall texture and finishing for a clean final result.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="panel-framing" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">SERVICE PROJECTS</div>
+        <h2 class="jg-panel-title">Framing Projects</h2>
+        <p class="jg-panel-subtitle">Strong framing work built correctly from the beginning.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid">
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80" alt="Basement Framing">
+        <div class="jg-card-body">
+          <h4>Basement Framing</h4>
+          <p>Interior walls framed for basement finishing and room additions.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80" alt="Wall Layout Framing">
+        <div class="jg-card-body">
+          <h4>Wall Layout Framing</h4>
+          <p>Accurate wall layout and structure for remodeling projects.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=900&q=80" alt="Wood Structure Work">
+        <div class="jg-card-body">
+          <h4>Wood Structure Work</h4>
+          <p>Reliable framing support for long-term strength and quality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="panel-stone" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">SERVICE PROJECTS</div>
+        <h2 class="jg-panel-title">Stone Work Projects</h2>
+        <p class="jg-panel-subtitle">Decorative and functional stone finishes that add value and beauty.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid">
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Stone Fireplace">
+        <div class="jg-card-body">
+          <h4>Stone Fireplace</h4>
+          <p>Elegant stone fireplace finish that becomes the center of the room.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80" alt="Exterior Stone Detail">
+        <div class="jg-card-body">
+          <h4>Exterior Stone Detail</h4>
+          <p>Stone accents that improve curb appeal and create a luxury look.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80" alt="Interior Stone Feature">
+        <div class="jg-card-body">
+          <h4>Interior Stone Feature</h4>
+          <p>Custom stone finish for walls, entrances, and design features.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="panel-roofing" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">SERVICE PROJECTS</div>
+        <h2 class="jg-panel-title">Roofing Projects</h2>
+        <p class="jg-panel-subtitle">Roofing repairs and installations focused on protection and long-term value.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid">
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=900&q=80" alt="Shingle Roof Installation">
+        <div class="jg-card-body">
+          <h4>Shingle Roof Installation</h4>
+          <p>Clean shingle installation designed to protect the home from Utah weather.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="Roof Repair">
+        <div class="jg-card-body">
+          <h4>Roof Repair</h4>
+          <p>Damaged roof areas repaired to help prevent leaks and future problems.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80" alt="Roof Replacement">
+        <div class="jg-card-body">
+          <h4>Roof Replacement</h4>
+          <p>Full roof upgrade with professional workmanship and clean finish.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="panel-siding" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">SERVICE PROJECTS</div>
+        <h2 class="jg-panel-title">Siding Projects</h2>
+        <p class="jg-panel-subtitle">Exterior siding upgrades that protect the home and improve curb appeal.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid">
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=900&q=80" alt="Modern Siding Upgrade">
+        <div class="jg-card-body">
+          <h4>Modern Siding Upgrade</h4>
+          <p>Clean siding installation for a fresh, modern exterior look.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Siding Repair">
+        <div class="jg-card-body">
+          <h4>Siding Repair</h4>
+          <p>Damaged siding repaired or replaced for a clean and protected exterior.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Exterior Transformation">
+        <div class="jg-card-body">
+          <h4>Exterior Transformation</h4>
+          <p>Siding, trim, and exterior details updated for a complete home refresh.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="panel-flooring" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">SERVICE PROJECTS</div>
+        <h2 class="jg-panel-title">Flooring Projects</h2>
+        <p class="jg-panel-subtitle">Beautiful and durable flooring installations for every area of the home.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid">
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=900&q=80" alt="Luxury Vinyl Flooring">
+        <div class="jg-card-body">
+          <h4>Luxury Vinyl Flooring</h4>
+          <p>Durable, modern flooring with a clean professional installation.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Wood Flooring">
+        <div class="jg-card-body">
+          <h4>Wood Flooring</h4>
+          <p>Warm wood-style flooring that adds value and beauty to the home.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=80" alt="Tile Flooring">
+        <div class="jg-card-body">
+          <h4>Tile Flooring</h4>
+          <p>High-quality tile floors built for durability and easy maintenance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="panel-concrete" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">SERVICE PROJECTS</div>
+        <h2 class="jg-panel-title">Concrete Projects</h2>
+        <p class="jg-panel-subtitle">Strong concrete work for patios, walkways, repairs, and outdoor upgrades.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid">
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=80" alt="Concrete Patio">
+        <div class="jg-card-body">
+          <h4>Concrete Patio</h4>
+          <p>Clean patio pour finished for outdoor living and long-term durability.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=900&q=80" alt="Concrete Walkway">
+        <div class="jg-card-body">
+          <h4>Concrete Walkway</h4>
+          <p>Functional walkway with a clean finish and professional layout.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="Concrete Repair">
+        <div class="jg-card-body">
+          <h4>Concrete Repair</h4>
+          <p>Cracked or damaged concrete repaired for safety and appearance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="panel-about" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">ABOUT J&G PRO</div>
+        <h2 class="jg-panel-title">Built on Quality, Integrity & Results</h2>
+        <p class="jg-panel-subtitle">A trusted construction and remodeling team serving Utah with professional craftsmanship and a clear commitment to customer satisfaction.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+
+    <div class="jg-about-box">
+      <div class="jg-about-copy">
+        <p>J&G Pro Building Services helps homeowners bring their ideas to life with clean workmanship, reliable communication, and a professional process from start to finish.</p>
+        <p>From remodels, flooring, tile, drywall, roofing, siding, framing, painting, concrete, and exterior upgrades, our goal is simple: deliver work that looks beautiful, lasts, and makes our clients feel confident they hired the right team.</p>
+
+        <div class="jg-about-points">
+          <div class="jg-point">Licensed & Insured Mindset</div>
+          <div class="jg-point">Quality Craftsmanship</div>
+          <div class="jg-point">Clean Professional Finish</div>
+          <div class="jg-point">Trusted Utah Service</div>
+        </div>
+      </div>
+
+      <div class="jg-about-image">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=80" alt="J&G Pro Building Services remodel work">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="panel-projects" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">FEATURED PROJECTS</div>
+        <h2 class="jg-panel-title">10 Finished Project Ideas</h2>
+        <p class="jg-panel-subtitle">A general gallery showing the type of high-quality work clients can expect from J&G Pro Building Services.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid projects-grid">
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80" alt="Bathroom Remodel">
+        <div class="jg-card-body">
+          <h4>Bathroom Remodel</h4>
+          <p>Modern bathroom with tile shower, clean fixtures, and premium finishes.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=900&q=80" alt="Flooring Upgrade">
+        <div class="jg-card-body">
+          <h4>Flooring Upgrade</h4>
+          <p>Durable flooring installed with clean transitions and professional detail.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Stone Fireplace">
+        <div class="jg-card-body">
+          <h4>Stone Fireplace</h4>
+          <p>Custom fireplace finish that adds warmth and a luxury focal point.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80" alt="Kitchen Remodel">
+        <div class="jg-card-body">
+          <h4>Kitchen Remodel</h4>
+          <p>Cabinets, counters, flooring, and backsplash upgraded for a fresh kitchen.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=900&q=80" alt="Roofing & Shingles">
+        <div class="jg-card-body">
+          <h4>Roofing & Shingles</h4>
+          <p>Reliable shingle roofing work built to protect the home.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=900&q=80" alt="Siding Project">
+        <div class="jg-card-body">
+          <h4>Siding Project</h4>
+          <p>Exterior siding refresh for protection and curb appeal.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=900&q=80" alt="Wood Work">
+        <div class="jg-card-body">
+          <h4>Wood Work</h4>
+          <p>Clean wood details and framing built with strength and precision.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80" alt="Interior Painting">
+        <div class="jg-card-body">
+          <h4>Interior Painting</h4>
+          <p>Professional paint finish with sharp lines and smooth coverage.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Drywall Finish">
+        <div class="jg-card-body">
+          <h4>Drywall Finish</h4>
+          <p>Smooth drywall repair and finish ready for paint.</p>
+        </div>
+      </div>
+
+      <div class="jg-card">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Tile Installation">
+        <div class="jg-card-body">
+          <h4>Tile Installation</h4>
+          <p>Detailed tile installation for bathrooms, floors, and backsplashes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="panel-reviews" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">CLIENT REVIEWS</div>
+        <h2 class="jg-panel-title">What Customers Say</h2>
+        <p class="jg-panel-subtitle">Powerful 4 and 5 star style testimonials from homeowners who loved the quality, communication, and final results.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-review-grid">
+      
+  <div class="jg-review-card">
+    <div class="jg-stars">★★★★★</div>
+    <p>“J&G Pro Building Services completely transformed our bathroom. The tile work was clean, the crew was respectful, and the final result looked better than we imagined.”</p>
+    <h4>Carlos M.</h4>
+  </div>
+
+  <div class="jg-review-card">
+    <div class="jg-stars">★★★★★</div>
+    <p>“They remodeled our kitchen and flooring and made the whole process easy. Great communication, beautiful workmanship, and everything was done with attention to detail.”</p>
+    <h4>Maria G.</h4>
+  </div>
+
+  <div class="jg-review-card">
+    <div class="jg-stars">★★★★☆</div>
+    <p>“Very professional team. They repaired drywall, painted, and finished everything clean. I would definitely call them again for future projects.”</p>
+    <h4>David R.</h4>
+  </div>
+
+  <div class="jg-review-card">
+    <div class="jg-stars">★★★★★</div>
+    <p>“Our exterior siding and paint made the house look brand new. The quality was excellent and they really cared about making us happy.”</p>
+    <h4>Ana S.</h4>
+  </div>
+
+  <div class="jg-review-card">
+    <div class="jg-stars">★★★★★</div>
+    <p>“Reliable, honest, and high quality. They showed up, explained the work, and delivered a beautiful finished project. Highly recommended.”</p>
+    <h4>Jose L.</h4>
+  </div>
+    </div>
+  </div>
+</section>
+
+<section id="panel-how" class="jg-project-panel">
+  <div class="jg-panel-inner">
+    <div class="jg-panel-top">
+      <div>
+        <div class="jg-panel-kicker">HOW IT WORKS</div>
+        <h2 class="jg-panel-title">Simple, Clear & Professional</h2>
+        <p class="jg-panel-subtitle">We make the process easy: request your estimate, review the project details, schedule the work, and enjoy the final transformation.</p>
+      </div>
+      <button class="jg-panel-close" onclick="closeJGPanel()">×</button>
+    </div>
+    <div class="jg-card-grid">
+      <div class="jg-card"><div class="jg-card-body"><h4>1. Free Estimate</h4><p>Tell us what you need and we review the project with clear communication.</p></div></div>
+      <div class="jg-card"><div class="jg-card-body"><h4>2. Plan & Schedule</h4><p>We organize the work, materials, timeline, and details before starting.</p></div></div>
+      <div class="jg-card"><div class="jg-card-body"><h4>3. Quality Finish</h4><p>Our team completes the work with professional craftsmanship and clean results.</p></div></div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
 
   <div class="footer-container">
@@ -770,33 +1582,33 @@ footer{background:var(--black);padding:60px 5% 28px;}
     <div class="footer-links">
       <h3>SERVICES</h3>
 
-      <a href="#">Painting</a>
-      <a href="#">Tile Work</a>
-      <a href="#">Remodeling</a>
-      <a href="#">Drywall</a>
-      <a href="#">Framing</a>
+      <a href="#panel-painting" class="jg-open-link">Painting</a>
+      <a href="#panel-tile" class="jg-open-link">Tile Work</a>
+      <a href="#panel-remodeling" class="jg-open-link">Remodeling</a>
+      <a href="#panel-drywall" class="jg-open-link">Drywall</a>
+      <a href="#panel-framing" class="jg-open-link">Framing</a>
     </div>
 
     <!-- MORE -->
     <div class="footer-links">
       <h3>MORE SERVICES</h3>
 
-      <a href="#">Stone Work</a>
-      <a href="#">Roofing</a>
-      <a href="#">Siding</a>
-      <a href="#">Flooring</a>
-      <a href="#">Concrete</a>
+      <a href="#panel-stone" class="jg-open-link">Stone Work</a>
+      <a href="#panel-roofing" class="jg-open-link">Roofing</a>
+      <a href="#panel-siding" class="jg-open-link">Siding</a>
+      <a href="#panel-flooring" class="jg-open-link">Flooring</a>
+      <a href="#panel-concrete" class="jg-open-link">Concrete</a>
     </div>
 
     <!-- COMPANY -->
     <div class="footer-links">
       <h3>COMPANY</h3>
 
-      <a href="#">About Us</a>
-      <a href="#">Projects</a>
-      <a href="#">Reviews</a>
-      <a href="#">How It Works</a>
-      <a href="#">Contact</a>
+      <a href="#panel-about" class="jg-open-link">About Us</a>
+      <a href="#panel-projects" class="jg-open-link">Projects</a>
+      <a href="#panel-reviews" class="jg-open-link">Reviews</a>
+      <a href="#panel-how" class="jg-open-link">How It Works</a>
+      <a href="#contact" class="jg-open-link">Contact</a>
     </div>
 
   </div>
@@ -1123,6 +1935,31 @@ body{
     } else {
       nav.classList.remove('solid');
     }
+  });
+</script>
+
+
+<script>
+  function closeJGPanel(){
+    document.querySelectorAll('.jg-project-panel').forEach(function(panel){
+      panel.classList.remove('active');
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('a[href^="#panel-"]').forEach(function(link){
+      link.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(!target) return;
+
+        closeJGPanel();
+        target.classList.add('active');
+
+        const y = target.getBoundingClientRect().top + window.pageYOffset - 70;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      });
+    });
   });
 </script>
 
