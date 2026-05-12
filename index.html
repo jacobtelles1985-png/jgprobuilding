@@ -1088,5 +1088,37 @@ body{
 
 </style>
 
+<!-- FIX: show hidden middle content and restore menu behavior -->
+<style>
+  .reveal,
+  .reveal-left,
+  .reveal-right{
+    opacity:1 !important;
+    transform:none !important;
+  }
+</style>
+
+<script>
+  const nav = document.getElementById('nav');
+  const burger = document.getElementById('burger');
+  const mobMenu = document.getElementById('mob-menu');
+
+  function toggleMenu(){
+    if (mobMenu) mobMenu.classList.toggle('open');
+    if (burger) burger.classList.toggle('open');
+  }
+
+  window.toggleMenu = toggleMenu;
+
+  window.addEventListener('scroll', function(){
+    if (!nav) return;
+    if (window.scrollY > 40) {
+      nav.classList.add('solid');
+    } else {
+      nav.classList.remove('solid');
+    }
+  });
+</script>
+
 </body>
 </html>
